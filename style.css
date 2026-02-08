@@ -21,6 +21,11 @@
     --border-hover: #00008B;
 }
 
+/* Smooth scrolling untuk seluruh halaman */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -64,6 +69,25 @@ header {
     position: relative;
     overflow: hidden;
     transition: background 0.5s ease;
+    /* Navbar sticky dan smooth */
+    position: fixed; /* Mengubah ke fixed untuk efek slide yang lebih baik */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease, background 0.5s ease;
+    /* Efek slide: default slide-down (terlihat) */
+    transform: translateY(0);
+}
+
+header.slide-up {
+    /* Slide up (hilang) saat scroll down */
+    transform: translateY(-100%);
+}
+
+header.slide-down {
+    /* Slide down (muncul) saat scroll up */
+    transform: translateY(0);
 }
 
 body.light-mode header {
@@ -137,22 +161,7 @@ body.light-mode nav a {
     color: var(--text-light);
 }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    background-color: var(--nav-hover);
-    transition: all 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
-    left: 0;
-}
-
+/* Menghapus garis bawah (underline) pada hover - hanya efek warna dan scale */
 nav a:hover {
     color: var(--nav-hover);
     transform: scale(1.1);
@@ -162,6 +171,8 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    /* Tambahkan padding-top untuk mengakomodasi header fixed */
+    padding-top: 8rem; /* Sesuaikan dengan tinggi header */
 }
 
 section {
@@ -373,5 +384,8 @@ body.light-mode footer {
         top: 0.5rem;
         right: 0.5rem;
         font-size: 1.2rem;
+    }
+    main {
+        padding-top: 6rem; /* Sesuaikan untuk mobile */
     }
 }
