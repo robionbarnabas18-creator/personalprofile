@@ -8,14 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     <!-- Font Awesome untuk ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Link ke file CSS eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Bobby's Profile</h1>
-        <button class="toggle-btn" id="toggleMode"><i class="fas fa-moon"></i></button>
-        <nav id="navbar">
+        <nav>
             <a href="#tentang">Tentang</a>
             <a href="#pendidikan">Pendidikan</a>
             <a href="#keahlian">Keahlian</a>
@@ -23,6 +21,11 @@
             <a href="#kontak">Kontak</a>
         </nav>
     </header>
+
+    <!-- Floating toggle button sebagai pop-up -->
+    <div id="floatingToggle" class="floating-toggle">
+        <button class="toggle-btn" id="toggleMode"><i class="fas fa-moon"></i></button>
+    </div>
 
     <main>
         <section id="tentang" class="profile">
@@ -97,7 +100,6 @@
         <p>&copy; 2026 Bobby Panggalaha. Semua hak dilindungi.</p>
     </footer>
 
-    <!-- Link ke file JavaScript eksternal -->
     <script src="script.js"></script>
 </body>
 </html>
