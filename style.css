@@ -146,6 +146,8 @@ body.light-mode .toggle-btn {
 
 nav {
     margin-top: 1rem;
+    display: flex; /* Pastikan horizontal di semua ukuran layar */
+    justify-content: center; /* Rata tengah link */
 }
 
 nav a {
@@ -371,8 +373,8 @@ body.light-mode footer {
         height: 120px;
     }
     nav a {
-        margin: 0 0.5rem; /* Kurangi margin horizontal untuk mobile */
-        font-size: 0.9rem; /* Ukuran font lebih kecil untuk mobile */
+        margin: 0 0.3rem; /* Margin lebih kecil untuk horizontal rapat */
+        font-size: 0.8rem; /* Font lebih kecil di mobile */
     }
     .social-links a {
         font-size: 1.2rem;
