@@ -197,6 +197,7 @@ section {
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     transition: all 0.5s ease; /* Smooth transition for mode switch */
     animation: slideIn 0.8s ease-out;
+    scroll-margin-top: 120px; /* Offset untuk header fixed agar scroll tepat */
 }
 
 body.light-mode section {
@@ -407,4 +408,3 @@ body.light-mode footer {
         padding: 8px;
     }
 }
-        width: 
